@@ -333,5 +333,259 @@ export const MEALS = [
     true,
     true,
     true
-  )
+  ),
+
+    // ----- New Meals for Category c2 (Quick & Easy) -----
+  new Meal(
+    'm16',
+    ['c2'],
+    'Grilled Cheese Sandwich',
+    'affordable',
+    'simple',
+    'https://media.istockphoto.com/id/2046217346/photo/indian-plain-sandwich-with-vegetable-and-sauce-in-plate-india-closeup.webp?a=1&b=1&s=612x612&w=0&k=20&c=h1IElcBz0IfqNOe9Ol-7ATB6KE3DK8cqNhOZjstok_k=',
+    10,
+    [
+      'Bread slices',
+      'Cheddar cheese',
+      'Butter'
+    ],
+    [
+      'Butter one side of each bread slice.',
+      'Place cheese between unbuttered sides.',
+      'Grill on skillet until golden and cheese melts.'
+    ],
+    true,
+    true,
+    true,
+    true
+  ),
+  new Meal(
+    'm17',
+    ['c2'],
+    'Avocado Toast',
+    'affordable',
+    'simple',
+    'https://images.unsplash.com/photo-1585768425229-d3a88ff63ebb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXZhY2FkbyUyMHRvYXN0fGVufDB8fDB8fHww',
+    8,
+    [
+      'Bread slices',
+      'Ripe avocado',
+      'Salt',
+      'Pepper',
+      'Lemon juice'
+    ],
+    [
+      'Toast the bread.',
+      'Mash avocado with salt, pepper, and lemon juice.',
+      'Spread on toast and serve.'
+    ],
+    true,
+    true,
+    true,
+    true
+  ),
+  new Meal(
+    'm18',
+    ['c2'],
+    'Omelette',
+    'affordable',
+    'simple',
+    'https://plus.unsplash.com/premium_photo-1667807521536-bc35c8d8b64b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8T21lbGV0dGV8ZW58MHx8MHx8fDA%3D',
+    7,
+    [
+      'Eggs',
+      'Salt',
+      'Pepper',
+      'Butter',
+      'Cheese (optional)'
+    ],
+    [
+      'Beat eggs with salt and pepper.',
+      'Heat butter in pan and pour eggs.',
+      'Cook until set, add cheese if desired, fold and serve.'
+    ],
+    true,
+    true,
+    true,
+    true
+  ),
+  new Meal(
+    'm19',
+    ['c2'],
+    'Chicken Wrap',
+    'pricey',
+    'simple',
+    'https://plus.unsplash.com/premium_photo-1679287668420-80c27ea4fb31?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMHdyYXB8ZW58MHx8MHx8fDA%3D',
+    15,
+    [
+      'Tortilla wraps',
+      'Cooked chicken strips',
+      'Lettuce',
+      'Tomatoes',
+      'Mayonnaise'
+    ],
+    [
+      'Warm tortillas.',
+      'Layer lettuce, tomato, and chicken.',
+      'Drizzle with mayonnaise and roll up.'
+    ],
+    false,
+    true,
+    true,
+    false
+  ),
+  new Meal(
+    'm20',
+    ['c2'],
+    'Fruit Smoothie',
+    'affordable',
+    'simple',
+    'https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RnJ1aXQlMjBTbW9vdGhpZXxlbnwwfHwwfHx8MA%3D%3D',
+    5,
+    [
+      'Banana',
+      'Berries',
+      'Yogurt',
+      'Honey'
+    ],
+    [
+      'Blend banana, berries, yogurt, and honey until smooth.',
+      'Serve chilled.'
+    ],
+    true,
+    true,
+    true,
+    true
+  ),
+
+  // ----- New Meals for Category c3 (Hamburgers) -----
+  new Meal(
+    'm21',
+    ['c3'],
+    'Classic Burger',
+    'affordable',
+    'simple',
+    'https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg',
+    20,
+    [
+      'Beef patties',
+      'Burger buns',
+      'Lettuce',
+      'Tomato',
+      'Cheddar cheese',
+      'Ketchup'
+    ],
+    [
+      'Grill beef patties until cooked.',
+      'Toast buns lightly.',
+      'Assemble burger with lettuce, tomato, cheese, and ketchup.'
+    ],
+    false,
+    true,
+    false,
+    false
+  ),
+  new Meal(
+    'm22',
+    ['c3'],
+    'Chicken Burger',
+    'pricey',
+    'simple',
+    'https://media.istockphoto.com/id/1203580318/photo/vegan-meatless-plant-based-protein-chicken-strip-burger-on-a-whole-wheat-bun-with-lettuce.webp?a=1&b=1&s=612x612&w=0&k=20&c=Mbu79b068FJ4AHQb6BZDLeB1Lz9Hcc0h_EP8dXv5J5Q=',
+    25,
+    [
+      'Chicken breast',
+      'Burger buns',
+      'Lettuce',
+      'Mayonnaise',
+      'Pickles'
+    ],
+    [
+      'Grill chicken breast until cooked through.',
+      'Toast buns and spread mayonnaise.',
+      'Assemble with lettuce, pickles, and chicken.'
+    ],
+    false,
+    true,
+    true,
+    false
+  ),
+  new Meal(
+    'm23',
+    ['c3'],
+    'Veggie Burger',
+    'affordable',
+    'simple',
+    'https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg',
+    20,
+    [
+      'Veggie patty',
+      'Burger buns',
+      'Lettuce',
+      'Tomato',
+      'Mustard'
+    ],
+    [
+      'Cook veggie patty on skillet.',
+      'Toast buns and assemble with veggies and mustard.'
+    ],
+    true,
+    true,
+    true,
+    true
+  ),
+  new Meal(
+    'm24',
+    ['c3'],
+    'Double Bacon Cheeseburger',
+    'luxurious',
+    'hard',
+    'https://media.istockphoto.com/id/471927383/photo/the-pretzel-burger.webp?a=1&b=1&s=612x612&w=0&k=20&c=JifP91X6ldnZFJnTqteUajk0wC72sJofBFB4YzlZNps=',
+    35,
+    [
+      'Beef patties',
+      'Burger buns',
+      'Cheddar cheese',
+      'Bacon',
+      'Lettuce',
+      'Tomato',
+      'BBQ sauce'
+    ],
+    [
+      'Cook bacon until crispy.',
+      'Grill beef patties, melt cheese on top.',
+      'Assemble with bacon, veggies, and BBQ sauce.'
+    ],
+    false,
+    false,
+    false,
+    false
+  ),
+  new Meal(
+    'm25',
+    ['c3'],
+    'Spicy Jalapeño Burger',
+    'pricey',
+    'challenging',
+    'https://images.unsplash.com/photo-1582900125020-4d314f8a5de8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8SmFsYXBlJUMzJUIxbyUyMEJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D',
+    30,
+    [
+      'Beef patties',
+      'Burger buns',
+      'Pepper jack cheese',
+      'Jalapeños',
+      'Chipotle mayo'
+    ],
+    [
+      'Grill patties, melt cheese.',
+      'Assemble with jalapeños and chipotle mayo.'
+    ],
+    false,
+    false,
+    false,
+    false
+  ),
+
+
+  
 ];
