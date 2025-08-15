@@ -163,7 +163,7 @@ useLayoutEffect(() => {
       {/* Dietary chips */}
       <View style={[styles.card, { backgroundColor: Pastel.card }]}>
         <Text style={[styles.sectionTitle, { color: Pastel.text }]}>
-          Dietary
+          Dietary 
         </Text>
         <View style={styles.divider} />
         <View style={styles.chipsRow}>
