@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useMemo } from "react";
+import React, { useCallback, useContext, useLayoutEffect, useMemo } from "react";
 import {
   View,
   Text,
@@ -9,23 +9,40 @@ import {
 } from "react-native";
 import { MEALS } from "../data/dummy-data";
 import IconButton from "../components/IconButton";
+import { FavouritesContext } from "../store/favourites-context";
 
 export default function MealDetailScreen({ route, navigation }) {
+  const favouriteMealsCtx = useContext(FavouritesContext);
+
   const mealId = route.params.mealId;
 
   // find the single meal (fixes the '=' vs '===' bug)
   const meal = useMemo(() => MEALS.find((m) => m.id === mealId), [mealId]);
-  function headerButtonPressHandler() {
-    console.log("Pressed");
-  }
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      title: meal?.title ?? "Meal Detail",
-      headerRight: () => {
-        return <IconButton icon="star" color="white" onPress={headerButtonPressHandler} />;
-      },
-    });
-  }, [navigation, meal]);
+
+  const mealIsFavourite = favouriteMealsCtx.ids.includes(mealId);
+  
+  
+  const changeFavouriteStatusHandler = useCallback(() => {
+    if (mealIsFavourite) {
+      favouriteMealsCtx.removeFavourite(mealId);
+    } else {
+      favouriteMealsCtx.addFavourite(mealId);
+    }
+  }, [mealIsFavourite, mealId, favouriteMealsCtx]);
+
+useLayoutEffect(() => {
+  navigation.setOptions({
+    title: meal?.title ?? "Meal Detail",
+    headerRight: () => (
+      <IconButton
+        icon={mealIsFavourite ? "star" : "star-outline"}
+        color="white"
+        onPress={changeFavouriteStatusHandler}
+      />
+    ),
+  });
+}, [navigation, mealId, meal?.title, mealIsFavourite, favouriteMealsCtx]);
+
 
   if (!meal) {
     return (
