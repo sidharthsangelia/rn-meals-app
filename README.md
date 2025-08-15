@@ -54,29 +54,25 @@ Some of the key concepts and tools I learned while building this:
 
 Below are some snapshots from the Meals App I built while learning React Native & Expo.
 
-### 🏠 All Categories
-![All Categories](./assets/meals-app-all-cat.jpg)
+<table>
+<tr>
+<td><img src="./assets/meals-app-all-cat.jpg" alt="All Categories" width="300"/></td>
+<td><img src="./assets/meals-app-asian.jpg" alt="Asian Meals" width="300"/></td>
+</tr>
+<tr>
+<td><img src="./assets/meals-app-detail1.jpg" alt="Meal Detail 1" width="300"/></td>
+<td><img src="./assets/detail2.jpg" alt="Meal Detail 2" width="300"/></td>
+</tr>
+<tr>
+<td><img src="./assets/meals-app-drawer.jpg" alt="Drawer Navigation" width="300"/></td>
+<td><img src="./assets/meals-app-favouirte.jpg" alt="Favourites Screen" width="300"/></td>
+</tr>
+<tr>
+<td><img src="./assets/meals-app-hamburger.jpg" alt="Hamburger Meals" width="300"/></td>
+<td><img src="./assets/meals-app-quick.jpg" alt="Quick Meals" width="300"/></td>
+</tr>
+</table>
 
-### 🍜 Asian Meals
-![Asian Meals](./assets/meals-app-asian.jpg)
-
-### 📄 Meal Detail (Example 1)
-![Meal Detail 1](./assets/meals-app-detail1.jpg)
-
-### 📄 Meal Detail (Example 2)
-![Meal Detail 2](./assets/detail2.jpg)
-
-### 🍔 Drawer Navigation
-![Drawer Navigation](./assets/meals-app-drawer.jpg)
-
-### ⭐ Favourites Screen
-![Favourites Screen](./assets/meals-app-favouirte.jpg)
-
-### 🍽️ Hamburger Meals
-![Hamburger Meals](./assets/meals-app-hamburger.jpg)
-
-### ⚡ Quick Meals
-![Quick Meals](./assets/meals-app-quick.jpg)
 
 ---
 
