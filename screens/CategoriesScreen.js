@@ -1,9 +1,10 @@
-import { View, Text, FlatList } from "react-native";
+import { View, FlatList, StyleSheet } from "react-native";
 import React from "react";
 import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
 
 export default function CategoriesScreen({ navigation }) {
+  
   function renderCategoryItem(itemData) {
     function pressHandler() {
       navigation.navigate("MealsOverview", {
@@ -20,14 +21,26 @@ export default function CategoriesScreen({ navigation }) {
       />
     );
   }
+
   return (
-    <View>
+    <View style={styles.screen}>
       <FlatList
         data={CATEGORIES}
         keyExtractor={(item) => item.id}
         renderItem={renderCategoryItem}
         numColumns={2}
+        contentContainerStyle={styles.listContainer}
       />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: "#F9F6F2", // matches App.js background
+  },
+  listContainer: {
+    paddingVertical: 8,
+  },
+});

@@ -1,7 +1,8 @@
 import { View, Text, Image, StyleSheet, Pressable } from "react-native";
-import React from "react";
+import React, { useCallback } from "react";
+import { useNavigation } from "@react-navigation/native";
 
-export default function MealItem({ data, onPress }) {
+export default function MealItem({ data }) {
   // Color coding for complexity
   const complexityColors = {
     simple: "#4CAF50", // green
@@ -20,6 +21,14 @@ export default function MealItem({ data, onPress }) {
   const getTagBg = (color) => {
     return color + "22"; // semi-transparent for light background
   };
+  const navigation = useNavigation();
+  function pressHandler() {
+    navigation.navigate("MealDetail", {
+      mealId: data.id,
+    });
+  }
+
+ 
 
   return (
     <Pressable
@@ -28,19 +37,15 @@ export default function MealItem({ data, onPress }) {
         pressed && { transform: [{ scale: 0.998 }], opacity: 0.9 },
       ]}
       android_ripple={{ color: "#ddd" }}
-      onPress={onPress}
+      onPress={ pressHandler}
     >
-      {/* Image */}
       <Image style={styles.image} source={{ uri: data.imageUrl }} />
 
-      {/* Content */}
       <View style={styles.content}>
-        {/* Title */}
         <Text style={styles.title} numberOfLines={1}>
           {data.title}
         </Text>
 
-        {/* Meta info */}
         <View style={styles.metaContainer}>
           <View style={[styles.tag, { backgroundColor: "#E3F2FD" }]}>
             <Text style={[styles.tagText, { color: "#1565C0" }]}>
@@ -51,7 +56,11 @@ export default function MealItem({ data, onPress }) {
           <View
             style={[
               styles.tag,
-              { backgroundColor: getTagBg(complexityColors[data.complexity.toLowerCase()]) },
+              {
+                backgroundColor: getTagBg(
+                  complexityColors[data.complexity.toLowerCase()]
+                ),
+              },
             ]}
           >
             <Text
@@ -67,13 +76,19 @@ export default function MealItem({ data, onPress }) {
           <View
             style={[
               styles.tag,
-              { backgroundColor: getTagBg(affordabilityColors[data.affordability.toLowerCase()]) },
+              {
+                backgroundColor: getTagBg(
+                  affordabilityColors[data.affordability.toLowerCase()]
+                ),
+              },
             ]}
           >
             <Text
               style={[
                 styles.tagText,
-                { color: affordabilityColors[data.affordability.toLowerCase()] },
+                {
+                  color: affordabilityColors[data.affordability.toLowerCase()],
+                },
               ]}
             >
               {data.affordability.toUpperCase()}
